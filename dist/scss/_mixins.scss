@@ -1,0 +1,23 @@
+// mixins 
+@mixin flex_box($direction: row, $align: center, $justify: center,$row-gap: 0, $col-gap:0)  {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $row-gap $col-gap;
+}
+
+@mixin grid($cols: 1, $align: center, $justify: center, $row-gap: 0, $col-gap:0) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    align-content: $align;
+    justify-items: $justify;
+    gap: $row-gap $col-gap;
+}
+
+@mixin large-screen($breakpoint) {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+}
+  

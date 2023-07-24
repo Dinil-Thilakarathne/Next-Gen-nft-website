@@ -1,0 +1,41 @@
+// colors 
+$clr-praimary: (
+    200: hsl(277, 75%, 75%),
+    400: hsl(277, 86%, 67%),
+    600: hsl(248, 91%, 61%),
+);
+
+$clr-netural: (
+    100: hsl(0, 0%, 95%),
+    150: hsl(0, 0%, 75%),
+    200: hsl(231, 100%, 81%),
+    400: hsl(235, 27%, 25%),
+    600: hsl(231, 31%, 13%),
+    700: hsl(240, 50%, 3%),
+    900: hsl(0,0,0%)
+);
+
+$clr-gradient: (
+    clr_2 : linear-gradient(to right, #5C43F6 0%, #BC61F3 100%),
+    clr_3 : linear-gradient(270deg, rgba(92,67,246,1) 19%, rgba(188,97,243,1) 73%, rgba(242,242,242,1) 100%),
+);
+
+
+
+// typography 
+$ff-base : 'Poppins', sans-serif;
+
+$font-size: (
+    small: clamp(0.83rem, calc(0.83rem + 0.00vw), 0.83rem),
+    regular: clamp(1.00rem, calc(0.93rem + 0.36vw), 1.25rem),
+    medium: clamp(1.20rem, calc(1.01rem + 0.86vw), 1.88rem),
+    large: clamp(1.53rem, calc(1.01rem + 3vw), 3.5rem),
+    x_large: clamp(2.53rem, calc(1.01rem + 5.5vw), 4.5rem),
+);
+
+$font-weight: (
+    regular: 400,
+    semibold: 500,
+    bold :700,
+    x_bold:900
+);

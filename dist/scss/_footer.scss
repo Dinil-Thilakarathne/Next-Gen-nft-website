@@ -1,0 +1,99 @@
+@import './mixins';
+
+footer{
+
+    & .footer-content{
+        @include grid($row-gap : 20px ,$col-gap: 20px);
+        padding: 20px max(3vw, 20px);
+
+        @include large-screen(1000px) {
+            grid-template-columns: 40% 60%;
+        }
+
+        & .content__body{
+            @include flex_box($direction: column, $align: flex-start, $row-gap: 10px);
+
+            & .body__header{
+                height: 100%;
+                font-size: map-get($font-size, medium );
+                font-weight: map-get($font-weight, bold );
+                letter-spacing: .5px;
+                background: map-get($clr-gradient, clr_2 );
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            & .icon__list{
+                width: 100%;
+                @include flex_box($justify: flex-start, $col-gap: 15px);
+                list-style: none;
+
+                & li{
+                    height: calc(map-get($font-size, medium) + .85rem);
+                    aspect-ratio: 1;
+                    border: none;
+                    border-radius: 50%;
+                    background-color: map-get($clr-netural, 400 );
+                    @include flex_box();
+                    cursor: pointer;
+                    transition: 
+                        color .25s ease-in,
+                        transform .25s ease-in
+                    ;
+                    
+                    & i{
+                        display: block;
+                        margin: auto;
+                        font-size: map-get($font-size, medium);
+                    }
+
+                    &:hover{
+                        color: map-get($clr-praimary, 400 );
+                        transform: scale(1.25);
+                    }
+                }
+
+            }
+        }
+
+        & .content__tabs{
+            width: 100%;
+            @include grid($cols: 2, $justify: sketch, $row-gap: 10px);
+
+            @include large-screen(1000px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            & .tab{
+                list-style: none;
+
+                &__header{
+                    font-size: map-get($font-size, regular);
+                    font-weight: map-get($font-weight, semibold );
+                }
+
+                &__item{
+                    font-size: map-get($font-size, small);
+                    font-weight: map-get($font-weight, regular );
+                    color:  map-get($clr-netural, 150);
+                    cursor: pointer;
+                    padding: 2.5px 0;
+                }
+            }
+        }
+    }
+
+    & .footer-attribute{
+
+        & p{
+            text-align:  center;
+
+            & a{
+                color: map-get($clr-praimary, 400 );
+                text-decoration: none;
+                font-weight: map-get($font-weight, semibold);
+            }
+        }
+    }
+}

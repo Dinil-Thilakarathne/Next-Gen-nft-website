@@ -1,0 +1,15 @@
+@import './mixins';
+
+.brand-section{
+    @include grid($cols:2,$justify: center, $row-gap: 1rem);
+    width: min(100%, 1440px);
+    margin: 0 auto;
+
+    @include large-screen(768px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    & img{
+        max-width: 55%;
+    }
+}

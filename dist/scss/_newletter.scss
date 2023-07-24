@@ -1,0 +1,66 @@
+@import './mixins';
+
+.news-letter{
+    min-height: 100vh;
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    @include flex_box($direction: column,$justify: center, $row-gap: 20px);
+
+    @include large-screen(768px) {
+        flex-direction: row;
+    }
+
+    @include large-screen(1000px) {
+        min-height: fit-content;
+        padding: 60px 20px;
+    }
+
+    &__image{
+
+        & img{
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+    }
+
+    &__content{
+        width: 100%;
+        @include flex_box($direction: column, $row-gap: 10px);
+        padding: 10px 20px;
+
+        & .email-section{
+            width: 100%;
+            position: relative;
+            @include flex_box();
+
+            & input{
+                height: 2.5rem;
+                width: 100%;
+                background-color: transparent;
+                border: 4px solid map-get($clr-netural, 400 );
+                border-radius: 5px;
+                padding: 10px 20px;
+            }
+
+            & button {
+                position: absolute;
+                right: 0;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-weight: map-get($font-weight, bold );
+                background:map-get($clr-gradient, clr_2 );
+                color: map-get($clr-netural, 100 );
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__image,
+    &__content{
+        @include large-screen(768px) {
+            width: 45%;
+        }
+    }
+}

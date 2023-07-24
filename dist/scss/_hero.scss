@@ -1,0 +1,97 @@
+@import './mixins';
+
+.hero-section{
+    min-height: calc(100vh - 50px);
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    @include flex_box($direction: column-reverse);
+
+    @include large-screen(768px){
+        flex-direction: row;
+    }
+
+    &__content{
+        width: 100%;
+        @include flex_box($direction: column,$align: flex-start,$row-gap: 1rem);
+        padding-inline : max(3vh,10px);
+
+        & .content-header{
+            @include flex_box($direction: column,$align: flex-start);
+            font-size: map-get($font-size, x_large );
+            font-weight: map-get($font-weight, x_bold );
+            line-height: 3rem;
+
+            @include large-screen(768px){
+                line-height: 5rem;
+            }
+        }
+
+        & .content-description{
+            font-size: map-get($font-size, regular );
+            font-weight: map-get($font-weight, regular );
+        }
+
+        & .btn-group{
+            width: 100%;
+            @include flex_box($justify: flex-start, $col-gap: 1rem);
+
+            & button{
+                width: max(40%, 200px);
+                padding: 10px 20px;
+                border: 2px solid map-get($clr-praimary, 400 );
+                border-radius: 5px;
+                font-weight: map-get($font-weight, bold );
+                color: map-get($clr-netural, 100 );
+            
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            & .start-btn{
+                background: map-get($clr-gradient, clr_2 );
+            }
+            & .create-btn{
+                background-color:transparent;
+
+                &:hover{
+                    background: map-get($clr-gradient, clr_2 );
+                }
+
+            }
+        }
+    }
+
+    &__image{
+        height: min(20%,50px);
+        width: 100%;
+        
+        & img{
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            aspect-ratio: 1;
+        }
+    }
+
+    & .go-to-top-btn{
+        height: 35px;
+        aspect-ratio: 1;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: map-get($clr-praimary, 400 );
+        z-index: 999;
+        @include flex_box();
+
+        & i{
+            // display: block;
+            // margin: auto;
+            font-size: map-get($font-size, medium );
+        }
+    }
+}

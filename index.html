@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXT Gen</title>
+
+    <!-- boxicon cdn  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- csutom css file -->
+    <link rel="stylesheet" href="dist/css/style.css">
+
+</head>
+<body>
+    <header class="header section">
+        <div class="header__logo">
+            Next
+            <span>
+                Gen
+            </span>
+        </div>
+        <div class="header__nav_icon">
+            <i class='bx bx-menu-alt-right'></i>
+        </div>
+        <div class="header__nav">
+            <ul class="nav">
+                <a href="#" class="nav__link">
+                    <li class="nav__item">Home</li>
+                </a>
+                <a href="#marketplace" class="nav__link">
+                    <li class="nav__item">Marketplace</li>
+                </a>
+                <a href="#artists" class="nav__link">
+                    <li class="nav__item">Artists</li>
+                </a>
+                <a href="#commiunity" class="nav__link">
+                    <li class="nav__item">Commiunity</li>
+                </a>
+            </ul>
+            <div class="btns">
+                <button class="btns__login-btn">
+                    Login
+                </button>
+                <button class="btns__signup-btn">
+                    Sign up
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section section">
+        <div class="hero-section__content">
+            <h1 class="content-header">
+                <span>Best NFTs </span>
+                <span>Marketplace.</span>
+            </h1>
+            <p class="content-description">
+                Ultrices eget pretium sit euismod mi id. In commodo auctor eget congue sit. Risus, aliquam odio posuere ac in in nisl sed augue. Porta aenean egestas malesuada in pulvinar enim viverra.
+            </p>
+            <div class="btn-group">
+                <button class="start-btn">
+                    Get started
+                </button>
+                <button class="create-btn">
+                    Create NFTs
+                </button>
+            </div>
+        </div>
+        <div class="hero-section__image">
+            <img src="image/hero image.png" alt="">
+        </div>
+
+        <div class="go-to-top-btn" id="goToTopBtn" onclick="scrollToTop()">
+            <i class='bx bxs-arrow-to-top'></i>
+        </div>
+    </div>
+
+    <div class="brand-section section">
+        <img src="image/logo_1.png" alt="">
+        <img src="image/logo_2.png" alt="">
+        <img src="image/logo_3.png" alt="">
+        <img src="image/logo_4.png" alt="">
+    </div>
+
+    <div class="marketplace-seciton section" id="marketplace">
+        <h1 class="marketplace-section__header">
+            Collect some NFTs
+        </h1> 
+        <div class="cards-section">
+            <div class="card">
+                <div class="card__content">
+                    <div class="content_header">
+                        <span class="card-name">
+                            Lighting Axe
+                        </span>
+                        <span class="card-price">
+                            0.36 eth
+                        </span>
+                    </div>
+                    <button class="buy-now-btn">
+                        Buy it now
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content">
+                    <div class="content_header">
+                        <span class="card-name">
+                            Skeleton head
+                        </span>
+                        <span class="card-price">
+                            0.29 eth
+                        </span>
+                    </div>
+                    <button class="buy-now-btn">
+                        Buy it now
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content">
+                    <div class="content_header">
+                        <span class="card-name">
+                            Hard breath
+                        </span>
+                        <span class="card-price">
+                            0.22 eth
+                        </span>
+                    </div>
+                    <button class="buy-now-btn">
+                        Buy it now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="creators-section section" id="artists">
+        <div class="section-content">
+            <h1 class="content__header">
+                Top Creators
+            </h1>
+            <p class="content-description">
+                In commodo auctor eget congue sit. Ultrices eget pretium sit euismod mi id. Risus, aliquam odio posuere ac in in nisl sed augue. 
+            </p>
+            <button class="view-all-btn">
+                View all creators
+            </button>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-img">
+                    <img src="image/creator-1.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Loura chin
+                </h1>
+                <button class="card__btn">
+                    View Details
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="image/creator-2.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Kelvin Glan
+                </h1>
+                <button class="card__btn">
+                    View Details
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="image/creator-3.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Glam Lee
+                </h1>
+                <button class="card__btn">
+                    View Details
+                </button>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="image/creator-4.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Alameda
+                </h1>
+                <button class="card__btn">
+                    View Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-letter section" >
+        <div class="news-letter__image">
+            <img src="image/new-letter-image.png" alt="">
+        </div>
+        <div class="news-letter__content">
+            <h1 class="content__header">
+                Subscribe And get Latest news update about NFTs.
+            </h1>
+            <p class="content__description">
+                In commodo auctor eget congue sit. Ultrices eget pretium sit euismod mi id. Risus, aliquam odio posuere ac in in nisl sed augue. Porta aenean egestas malesuada in pulvinar enim viverra.
+            </p>
+            <div class="email-section">
+                <input type="email" name="" id="" class="user-eamil" placeholder="Write your email here">
+                <button class="subs-btn">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="nft-collection section">
+        <div class="section__content">
+            <h1 class="content__header">
+                NFTs collections
+            </h1>
+            <p class="content__description">
+                Ultrices eget pretium sit euismod mi id posuere ac in in nisl sed augue.
+            </p>
+        </div>
+        <div class="nft-section">
+            <div class="card">
+                <div class="card__image">
+                    <img src="image/nft-1.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Broken collection
+                </h1>
+                <p class="card__link">
+                    View Collection
+                </p>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="image/nft-2.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Broken collection
+                </h1>
+                <p class="card__link">
+                    View Collection
+                </p>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="image/nft-3.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Broken collection
+                </h1>
+                <p class="card__link">
+                    View Collection
+                </p>
+            </div>
+            <div class="card">
+                <div class="card__image">
+                    <img src="image/nft-4.png" alt="">
+                </div>
+                <h1 class="card__header">
+                    Broken collection
+                </h1>
+                <p class="card__link">
+                    View Collection
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog__section section" id="commiunity">
+        <div class="section__header">
+            <h1 class="__header">
+                Our Latest Blog
+            </h1>
+            <button class="__btn">
+                Read our blogs
+            </button>
+        </div>
+        <div class="section__content">
+            <div class="card">
+                <img src="image/blog-1.png" class="card__image"></img>
+                <p class="card__type">
+                    Arts
+                </p>
+                <h1 class="card__header">
+                    Best NFTs arts collections from best artists 
+                </h1>
+            </div>
+            <div class="card">
+                <img src="image/blog-2.png" class="card__image"></img>
+                <p class="card__type">
+                    Design
+                </p>
+                <h1 class="card__header">
+                    Best NFTs arts collections from best artists 
+                </h1>
+            </div>
+            <div class="card">
+                <img src="image/blog-3.png" class="card__image"></img>
+                <p class="card__type">
+                    NFTs
+                </p>
+                <h1 class="card__header">
+                    Best NFTs arts collections from best artists 
+                </h1>
+            </div>
+            <div class="card">
+                <img src="image/blog-4.png" class="card__image"></img>
+                <p class="card__type">
+                    Arts
+                </p>
+                <h1 class="card__header">
+                    Best NFTs arts collections from best artists 
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <footer >
+        <div class="footer-content">
+            <div class="content__body">
+                <h1 class="body__header">
+                    Next
+                    <span>
+                        Gen
+                    </span>
+                </h1>
+                <p class="description">
+                    Ultrices eget pretium sit euismod mi id posuere ac in in nisl sed augue.  Posuere ac in in nisl sed augue.
+                </p>
+                <ul class="icon__list">
+                    <li>
+                        <i class='bx bxl-facebook-circle'></i>
+                    </li>
+                    <li>
+                        <i class='bx bxl-instagram-alt' ></i>
+                    </li>
+                    <li>
+                        <i class='bx bxl-twitter' ></i>
+                    </li>
+                    <li>
+                        <i class='bx bxl-linkedin-square' ></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="content__tabs">
+                <ul class="tab">
+                    <li class="tab__header">
+                        Marketplace
+                    </li>
+                    <li class="tab__item">
+                        NFTs
+                    </li>
+                    <li class="tab__item">
+                        Art
+                    </li>
+                    <li class="tab__item">
+                        Collectibles
+                    </li>
+                    <li class="tab__item">
+                        Virtual world
+                    </li>
+                </ul>
+                <ul class="tab">
+                    <li class="tab__header">
+                        Info
+                    </li>
+                    <li class="tab__item">
+                        Activity
+                    </li>
+                    <li class="tab__item">
+                        Stats
+                    </li>
+                    <li class="tab__item">
+                        Rankings
+                    </li>
+                </ul>
+                <ul class="tab">
+                    <li class="tab__header">
+                        Company
+                    </li>
+                    <li class="tab__item">
+                        About
+                    </li>
+                    <li class="tab__item">
+                        Support
+                    </li>
+                    <li class="tab__item">
+                        Features
+                    </li>
+                    <li class="tab__item">
+                        Top Creators
+                    </li>
+                </ul>
+                <ul class="tab">
+                    <li class="tab__header">
+                        Resources
+                    </li>
+                    <li class="tab__item">
+                        Info
+                    </li>
+                    <li class="tab__item">
+                        Affiliates
+                    </li>
+                    <li class="tab__item">
+                        Associated
+                    </li>
+                    <li class="tab__item">
+                        Blog
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-attribute">
+            <p>
+                Develop by 
+                <a href="https://linktr.ee/sona_code">
+                    Dinil Thilakarathne
+                </a>
+            </p>
+            <p>
+                &copy; 2022 Copyright 
+                <a href="https://templatesjungle.gumroad.com/l/nextgen-nft-marketplace-figma-website-template">
+                    TemplatesJungle.
+                </a> 
+                All rights reserved
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="dist/script/script.js"></script>
+</body>
+</html>

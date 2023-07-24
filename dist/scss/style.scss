@@ -1,0 +1,21 @@
+@import './global';
+@import './reset';
+@import './header';
+@import './hero';
+@import './brand';
+@import './marketplace';
+@import './creators';
+@import './newletter';
+@import './nftcollection';
+@import './blog';
+@import './footer';
+@import './responsive';
+
+@import './scrollbar';
+body{
+    height: min(100%,100vh);
+    width: 100%;
+    background-color: map-get($clr-netural, 700 );
+    color: map-get($clr-netural, 100 );
+    font-family: $ff-base;
+}

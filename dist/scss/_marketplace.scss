@@ -1,0 +1,84 @@
+@import './mixins';
+
+.marketplace-seciton{
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding: max(5vh, 20px) 0;
+    @include flex_box($direction:column);
+
+    &__header{
+        font-size: map-get($font-size, large );
+        font-weight: map-get($font-weight, bold );
+    }
+
+    & .cards-section{
+        @include grid($cols: 1,$row-gap: 40px);
+        width: 100%;
+
+        @include large-screen(768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @include large-screen(1000px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        & .card{
+            height: 350px;
+            width: min(90%, 325px);
+            background-size: cover;
+            position: relative;
+            border: none;
+            border-radius: 20px;
+            @include flex_box();
+
+            &__content{
+                height: 75px;
+                width: 80%;
+                background-color: map-get($clr-netural, 100 );
+                position: absolute;
+                bottom: -20px;
+                border: none;
+                border-radius: 10px;
+                @include flex_box($direction: column,$justify: space-evenly);
+
+                & .content_header{
+                    width: 100%;
+                    @include flex_box($justify: space-between);
+                    padding: 0 10px;
+                    border: none;
+                    border-radius: 10px 10px 0 0;
+                    color: map-get($clr-netural, 900 );
+                    font-weight: map-get($font-weight, bold );
+
+                    & .card-price{
+                        text-transform: uppercase;
+                    }
+                }
+
+                & .buy-now-btn{
+                    height: 2rem;
+                    width: 80%;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: map-get($font-size, regular );
+                    font-weight: map-get($font-weight, bold );
+                    background:map-get($clr-gradient, clr_2 );
+                    color: map-get($clr-netural, 100 );
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        & .card:nth-child(1){
+            background-image: url('../../image/card-img-1.png');
+        }
+        & .card:nth-child(2){
+            background-image: url('../../image/card-img-2.png');
+        }
+        & .card:nth-child(3){
+            background-image: url('../../image/card-img-3.png');
+        }
+    }
+
+}

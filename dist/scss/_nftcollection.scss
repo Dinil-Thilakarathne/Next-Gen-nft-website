@@ -1,0 +1,78 @@
+@import './mixins';
+
+.nft-collection{
+    min-height: 100vh;
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    padding: max(3vw, 20px);
+    @include flex_box($direction:column);
+
+    @include large-screen(1000px) {
+        min-height: fit-content;
+        padding: 60px 20px;
+    }
+    
+    & .section__content{
+        width: 100%;
+        @include flex_box($direction:column);
+        padding: 0 20px;
+        text-align: center;
+
+        & .content__header{
+            font-size: map-get($font-size, large );
+        }
+        
+        & .content__description{
+            font-size: map-get($font-size, regular );
+        }
+    }
+
+    & .nft-section{
+        padding: 20px 0;
+        width: 100%;
+        @include grid($cols: 1,$row-gap: 20px);
+
+        @include large-screen(768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include large-screen(1000px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        & .card{
+            width: 80%;
+            $top-border-radius: 40%;
+            $bottom-border-radius: 50px;
+            @include flex_box($direction: column);
+            padding: 10px ;
+            background-color: map-get($clr-netural, 600);
+            border: none;
+            border-radius: 
+                $top-border-radius 
+                $top-border-radius $bottom-border-radius
+                $bottom-border-radius
+            ;
+
+            @include large-screen(1000px) {
+                width: 95%;
+            }
+
+            &__image{
+
+                & img{
+                    max-width: 100%;
+                }
+            }
+
+            &__header{
+                font-size: map-get($font-size, regular );
+            }
+            &__link{
+                font-weight: map-get($font-weight, semibold );
+                color: map-get($clr-praimary, 400);
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@import './mixins';
+
+.header{
+    padding: 10px max(3vw,10px);
+    @include flex_box($justify: space-between);
+    position: relative;
+    background-color: map-get($clr-netural, 400 );
+
+    &__logo{
+        height: 100%;
+        @include flex_box();
+        font-size: map-get($font-size, medium );
+        font-weight: map-get($font-weight, bold );
+        letter-spacing: .5px;
+        background: map-get($clr-gradient, clr_2 );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__nav_icon{
+        font-size: map-get($font-size, large );
+        cursor: pointer;
+
+        @include large-screen(1000px) {
+            display: none;
+        }
+    }
+
+    &__nav{
+        height: 0;
+        width: min(80%, 345px);
+        @include flex_box($direction: column,$row-gap: 2rem);
+        background-color: map-get($clr-netural, 400 );
+        border: none;
+        border-radius: 20px;
+        position: absolute;
+        right: 10px;
+        top: 55px;
+        overflow: hidden;
+        transition: height .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @include large-screen(1000px){
+            width: max(80%, 345px);
+            height: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            row-gap: 0;
+            position: static;
+
+        }
+        
+        & .nav{
+            list-style: none;
+            font-size: map-get($font-size, medium );
+            font-weight: map-get($font-weight, semibold );
+            @include flex_box($direction: column, $row-gap: 2rem);
+            
+            @include large-screen(1000px) {
+                flex-direction: row;
+                font-size: map-get($font-size, regular );
+                column-gap: .75rem;
+            }
+            & a{
+                text-decoration: none;
+                color: map-get($clr-netural, 100 );
+                
+                &__item{
+                    cursor: pointer;
+                    transition: color .25s ease-in;
+                
+                        &:hover{
+                            color: map-get($clr-praimary, 400);
+                        }
+                }
+            }
+
+
+        }
+
+        & .btns{
+            @include flex_box($direction: column, $row-gap: 1rem);
+            width: min(80%, 345px);
+            
+            @include large-screen(768px){
+                width: min(40%, 345px);
+                flex-direction: row;
+                justify-content: flex-end;
+                column-gap: 1rem;
+            }
+
+            & button{
+                display: block;
+                width: min(80%, 300px);
+                padding: 10px 20px;
+                border: 2px solid map-get($clr-praimary, 400 );
+                border-radius: 5px;
+                font-weight: map-get($font-weight, bold );
+                background-color:transparent;
+                color: map-get($clr-netural, 100 );
+                z-index: 99;
+                
+                @include large-screen(768px){
+                    width: fit-content;
+                    margin-right: 10px;
+
+                }
+            
+                &:hover{
+                    cursor: pointer;
+                    background: map-get($clr-gradient, clr_2 );
+                }
+
+            }
+
+        }
+
+        &.active{
+            height: max(10vh,540px);
+            display: flex;
+
+        }
+
+
+    }
+
+
+}
