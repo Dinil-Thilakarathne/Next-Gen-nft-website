@@ -1,6 +1,6 @@
 # NFT Website
 
-* live demo - 
+* live demo - [click here]('https://dinil-thilakarathne.github.io/Next-Gen-nft-website/)
 * Source code - 
 
 # Sections
