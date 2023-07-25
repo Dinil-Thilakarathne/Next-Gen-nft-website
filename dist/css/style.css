@@ -57,7 +57,7 @@ html {
   border-radius: 20px;
   position: absolute;
   right: 10px;
-  top: 65px;
+  top: 75px;
   overflow: hidden;
   transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -150,6 +150,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0 0;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .hero-section {
@@ -253,6 +254,7 @@ html {
   gap: 1rem 0;
   width: min(100%, 1440px);
   margin: 0 auto;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .brand-section {
@@ -263,7 +265,7 @@ html {
   max-width: 55%;
 }
 
-.marketplace-seciton {
+.marketplace-section {
   width: min(100%, 1440px);
   margin: 0 auto;
   padding: max(5vh, 20px) 0;
@@ -272,12 +274,13 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0 0;
+  overflow: hidden;
 }
-.marketplace-seciton__header {
+.marketplace-section__header {
   font-size: clamp(1.53rem, 1.01rem + 3vw, 3.5rem);
   font-weight: 700;
 }
-.marketplace-seciton .cards-section {
+.marketplace-section .cards-section {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   align-content: center;
@@ -286,16 +289,16 @@ html {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .marketplace-seciton .cards-section {
+  .marketplace-section .cards-section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1000px) {
-  .marketplace-seciton .cards-section {
+  .marketplace-section .cards-section {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.marketplace-seciton .cards-section .card {
+.marketplace-section .cards-section .card {
   height: 350px;
   width: min(90%, 325px);
   background-size: cover;
@@ -308,7 +311,7 @@ html {
   justify-content: center;
   gap: 0 0;
 }
-.marketplace-seciton .cards-section .card__content {
+.marketplace-section .cards-section .card__content {
   height: 75px;
   width: 80%;
   background-color: hsl(0, 0%, 95%);
@@ -322,7 +325,7 @@ html {
   justify-content: space-evenly;
   gap: 0 0;
 }
-.marketplace-seciton .cards-section .card__content .content_header {
+.marketplace-section .cards-section .card__content .content_header {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -335,10 +338,10 @@ html {
   color: hsl(0, 0%, 0%);
   font-weight: 700;
 }
-.marketplace-seciton .cards-section .card__content .content_header .card-price {
+.marketplace-section .cards-section .card__content .content_header .card-price {
   text-transform: uppercase;
 }
-.marketplace-seciton .cards-section .card__content .buy-now-btn {
+.marketplace-section .cards-section .card__content .buy-now-btn {
   height: 2rem;
   width: 80%;
   border: none;
@@ -349,13 +352,13 @@ html {
   color: hsl(0, 0%, 95%);
   cursor: pointer;
 }
-.marketplace-seciton .cards-section .card:nth-child(1) {
+.marketplace-section .cards-section .card:nth-child(1) {
   background-image: url("../../image/card-img-1.png");
 }
-.marketplace-seciton .cards-section .card:nth-child(2) {
+.marketplace-section .cards-section .card:nth-child(2) {
   background-image: url("../../image/card-img-2.png");
 }
-.marketplace-seciton .cards-section .card:nth-child(3) {
+.marketplace-section .cards-section .card:nth-child(3) {
   background-image: url("../../image/card-img-3.png");
 }
 
@@ -368,6 +371,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1rem 0;
+  overflow: hidden;
 }
 .creators-section .section-content {
   display: flex;
@@ -458,6 +462,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 20px 0;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .news-letter {
@@ -528,6 +533,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0 0;
+  overflow: hidden;
 }
 @media (min-width: 1000px) {
   .nft-collection {
@@ -604,6 +610,7 @@ html {
   width: min(100%, 1440px);
   margin: 0 auto;
   padding: 40px 20px;
+  overflow: hidden;
 }
 @media (min-width: 1000px) {
   .blog__section {

@@ -5,6 +5,7 @@
     width: min(100%, 1440px);
     margin: 0 auto;
     @include flex_box($direction: column,$justify: center, $row-gap: 20px);
+    overflow: hidden;
 
     @include large-screen(768px) {
         flex-direction: row;

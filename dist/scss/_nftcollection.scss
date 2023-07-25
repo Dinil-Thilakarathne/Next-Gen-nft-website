@@ -6,6 +6,7 @@
     margin: 0 auto;
     padding: max(3vw, 20px);
     @include flex_box($direction:column);
+    overflow: hidden;
 
     @include large-screen(1000px) {
         min-height: fit-content;

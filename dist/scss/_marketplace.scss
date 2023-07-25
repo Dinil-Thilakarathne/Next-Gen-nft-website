@@ -1,10 +1,11 @@
 @import './mixins';
 
-.marketplace-seciton{
+.marketplace-section{
     width: min(100%, 1440px);
     margin: 0 auto;
     padding: max(5vh, 20px) 0;
     @include flex_box($direction:column);
+    overflow: hidden;
 
     &__header{
         font-size: map-get($font-size, large );

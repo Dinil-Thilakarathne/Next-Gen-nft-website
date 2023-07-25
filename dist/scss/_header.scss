@@ -5,7 +5,7 @@
     @include flex_box($justify: space-between);
     position: relative;
     background-color: map-get($clr-netural, 400 );
-
+    
     &__logo{
         height: 100%;
         @include flex_box();
@@ -36,7 +36,7 @@
         border-radius: 20px;
         position: absolute;
         right: 10px;
-        top: 65px;
+        top: 75px;
         overflow: hidden;
         transition: height .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 

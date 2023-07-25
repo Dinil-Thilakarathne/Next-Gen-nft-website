@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXT Gen</title>
+    <!-- scroll reveal cdn  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 
     <!-- boxicon cdn  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -82,13 +85,13 @@
     </div>
 
     <div class="brand-section section">
-        <img src="image/logo_1.png" alt="">
-        <img src="image/logo_2.png" alt="">
-        <img src="image/logo_3.png" alt="">
-        <img src="image/logo_4.png" alt="">
+        <img src="image/logo_1.png" alt="" class="brand__logo">
+        <img src="image/logo_2.png" alt="" class="brand__logo">
+        <img src="image/logo_3.png" alt="" class="brand__logo">
+        <img src="image/logo_4.png" alt="" class="brand__logo">
     </div>
 
-    <div class="marketplace-seciton section" id="marketplace">
+    <div class="marketplace-section section" id="marketplace">
         <h1 class="marketplace-section__header">
             Collect some NFTs
         </h1> 
@@ -441,5 +444,26 @@
 
 
     <script src="dist/script/script.js"></script>
+    <script defer src="dist/script/scrollReveal.js"></script>
+<!-- 
+    <script>
+        animateElement = (element,distance,duration,origin,delay) => {
+        // Initialize ScrollReveal with options
+        const sr = ScrollReveal({
+            distance: distance,
+            duration: duration,
+            easing: 'ease',
+            origin: origin,
+            delay: delay
+        });
+  
+        // Reveal the element
+        sr.reveal(element);
+        }
+
+
+        animateElement('.header','500px',500,'top',0);
+        animateElement('.hero-section__content','500px',500,'left',500)
+    </script> -->
 </body>
 </html>
